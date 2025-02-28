@@ -1,0 +1,25 @@
+% Definir parámetros
+channelID = 2857152; % Reemplaza con tu ID de canal
+fieldID = 1; % Reemplaza con el número de campo donde almacenas la temperatura
+numPoints = 10; % Número de puntos a analizar
+readAPIKey = '8IRSA5TQNO9W2CJU'; % Reemplaza con tu API Key de lectura si es necesario
+
+% Obtener los últimos 10 datos del canal
+data = thingSpeakRead(channelID, 'Fields', fieldID, 'NumPoints', numPoints, 'ReadKey', readAPIKey);
+
+% Verificar si hay datos suficientes
+if isempty(data)
+    disp('No hay datos disponibles.');
+    return;
+end
+
+% Calcular el promedio de temperatura
+avgTemp = mean(data);
+
+% Mostrar el promedio
+fprintf('El promedio de temperatura es: %.2f °C\n', avgTemp);
+
+% Comprobar si la temperatura supera los 35°C y mostrar alerta
+if avgTemp > 35
+    disp('⚠️ ALERTA: Temperatura superior a 35°C!');
+end
