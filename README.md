@@ -47,3 +47,12 @@ Este proyecto implementa un sistema IoT para medir temperatura usando una Raspbe
 2. Crear un nuevo análisis y copiar el código desde la carpeta "Codigos".
 3. Modificar channelID y readAPIKey con los valores correctos.
 4. Guardar y ejecutar el análisis para obtener el promedio de temperatura y recibir alertas si supera 35°C.
+
+## Captura de ThingSpeak
+![image](https://github.com/user-attachments/assets/6e30e016-68cd-4a23-a5a1-d68452cdbb34)
+
+## Captura de las lectura de promedio usando MatLab
+![image](https://github.com/user-attachments/assets/f4e7e4b3-9161-424e-a43e-4e2108dcdcae)
+
+
+
